@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+}
+
+.main {
+  height: 100vh;
+  background-color: hsl(210, 46%, 95%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .content {
+  justify-content: center;
+  display: flex;
+}
+.main .content .image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px 0px 0px 10px;
+}
+.main .content .article {
+  border-radius: 0px 10px 10px 0px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.main .content .article h4 {
+  padding: 15px;
+  font-size: 1.8em;
+  color: hsl(217, 19%, 35%);
+}
+.main .content .article .para {
+  padding: 15px;
+  color: hsl(217, 19%, 35%);
+}
+.main .content .article .share {
+  position: relative;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.main .content .article .share .name_date {
+  color: hsl(217, 19%, 35%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .content .article .share .name_date .photo img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  padding: 15px;
+}
+.main .content .article .share .name_date .name p {
+  padding: 10px;
+}
+.main .content .article .share .share_icon {
+  background-color: hsl(210, 46%, 95%);
+  padding: 10px;
+  border-radius: 50%;
+}
+.main .content .article .share .share_icon img {
+  height: 20px;
+  width: 20px;
+  position: relative;
+}
+.main .content .article .share .share_icon .icons {
+  position: absolute;
+  display: none;
+  background-color: hsl(217, 19%, 35%);
+  top: -50px;
+  right: 0px;
+  gap: 20px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  z-index: 1;
+}
+.main .content .article .share .share_icon .icons div h6 {
+  color: hsl(216, 24%, 68%);
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+.main .content .article .share .share_icon .icons::after {
+  position: absolute;
+  content: "";
+  height: 35px;
+  width: 35px;
+  top: 45%;
+  right: 100px;
+  transform: 90deg;
+  transform: rotate(45deg);
+  background-color: hsl(217, 19%, 35%);
+  z-index: -1;
+}
+.main .content .article .social {
+  background-color: hsl(217, 19%, 35%);
+  align-items: center;
+  gap: 10px;
+  justify-content: space-evenly;
+  border-radius: 30px;
+  padding: 10px;
+}
+.main .content .article .social div h6 {
+  color: hsl(216, 24%, 68%);
+  font-size: 1.2em;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+.main .content .article .social div img {
+  height: 30px;
+  width: 30px;
+}
+.main .content .article .social .sh {
+  margin: 20px;
+  background-color: hsl(222, 63%, 97%);
+  padding: 10px;
+  border-radius: 50%;
+}
+.main .content .article .social .sh img {
+  height: 15px;
+  width: 15px;
+}
+
+@media only screen and (max-width: 900px) {
+  .share {
+    display: flex;
+  }
+  .social {
+    display: none;
+  }
+  .article {
+    padding: 0px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .share {
+    display: flex;
+  }
+  .social {
+    display: none;
+  }
+  .article {
+    padding: 40px;
+  }
+}
